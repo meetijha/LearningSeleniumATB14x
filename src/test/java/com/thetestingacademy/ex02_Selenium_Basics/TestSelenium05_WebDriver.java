@@ -1,7 +1,6 @@
-package com.thetestingacademy.ex_02_Selenium_Basics;
+package com.thetestingacademy.ex02_Selenium_Basics;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class TestSelenium05_WebDriver {

@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex_02_Selenium_Basics;
+package com.thetestingacademy.ex02_Selenium_Basics;
 
 import com.thetestingacademy.CommonToAll;
 import io.qameta.allure.Description;
