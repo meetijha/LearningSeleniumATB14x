@@ -15,7 +15,7 @@ import org.openqa.selenium.WebDriver;
 public class TestSelenium17_Project_Locators_Selenium_ID_CLASSNAME_NAME extends CommonToAll {
 
     @Description("TC#1 - Verify that with invalid login, error message is displayed!")
-    @Owner("Pramod Dutta")
+    @Owner("Meeti")
     @Severity(SeverityLevel.BLOCKER)
     @Test
     public void test_vwo_login_invalid_login() {
