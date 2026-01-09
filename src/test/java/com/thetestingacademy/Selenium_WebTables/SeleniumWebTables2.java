@@ -20,7 +20,7 @@ public class SeleniumWebTables2 extends CommonToAll {
         // Find the xPath for the WebTable
         // -> //table[@summary="Sample Table"]
 
-        WaitHelpers.waitImplicitWait(driver,3000);
+        WaitHelpers.waitImplicitWait(driver,3);
 
         WebElement table = driver.findElement(By.xpath("//table[@summary='Sample Table']/tbody"));
 

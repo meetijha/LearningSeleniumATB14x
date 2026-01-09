@@ -26,7 +26,7 @@ public class SeleniumWebTables1 extends CommonToAll {
         String second_part = "]/td[";
         String third_part = "]";
 
-        WaitHelpers.waitImplicitWait(driver,3000);
+        WaitHelpers.waitImplicitWait(driver,3);
 
         int row= driver.findElements(By.xpath("//table[@id=\"customers\"]/tbody/tr")).size();
         int col= driver.findElements(By.xpath("//table[@id=\"customers\"]/tbody/tr[2]/td")).size();
