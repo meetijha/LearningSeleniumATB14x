@@ -35,7 +35,7 @@ public class TestSelenium28_Alerts extends CommonToAll {
         wait.until(ExpectedConditions.alertIsPresent());
 
         Alert alert = driver.switchTo().alert();
-        alert.sendKeys("PRAMOD");
+        alert.sendKeys("MEETI");
         alert.accept();
 //        alert.dismiss();
 
@@ -43,7 +43,7 @@ public class TestSelenium28_Alerts extends CommonToAll {
         String result = driver.findElement(By.id("result")).getText();
 //        Assert.assertEquals(result,"You successfully clicked an alert");
 //        Assert.assertEquals(result,"You clicked: Ok");
-        Assert.assertEquals(result, "You entered: PRAMOD");
+        Assert.assertEquals(result, "You entered: MEETI");
 
 
         closeBrowser(driver);
