@@ -26,17 +26,20 @@ public class ex_04_PaymentPage extends CommonToAll {
     @Test
     public void fillPaymentPage(){
 
+        // Payment form elements
         WebElement cardName= driver.findElement(By.xpath("//input[@id='cardName']"));
         WebElement cardNumber= driver.findElement(By.xpath("//input[@id='cardNumber']"));
         WebElement expiryDate=driver.findElement(By.xpath("//input[@id='expiry']"));
         WebElement cvv=driver.findElement(By.xpath("//input[@id='cvv']"));
         WebElement payBtn=driver.findElement(By.xpath("//button[contains(text(),'Pay')]"));
 
+        //Enter details
         cardName.sendKeys("Meeti");
         cardNumber.sendKeys("1111222233334444");
         expiryDate.sendKeys("10/26");
         cvv.sendKeys("123");
 
+        //move to button and click
         action.moveToElement(payBtn).build().perform();
         payBtn.click();
     }

@@ -42,9 +42,11 @@ public class ex_02_Shadow_DOM extends CommonToAll {
         driver.switchTo().window(parentWindow);
         waitJVM(5000);
 
+        //Fill username
         WebElement username=(WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('input#kils')");
         username.sendKeys("Meeti");
 
+        //Fill pizza name
         WebElement pizzaname=(WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('div#app2').shadowRoot.querySelector('input#pizza')");
         pizzaname.sendKeys("farmhouse");
 

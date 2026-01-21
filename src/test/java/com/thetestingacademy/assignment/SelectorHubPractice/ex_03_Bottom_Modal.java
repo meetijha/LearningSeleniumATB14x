@@ -29,10 +29,12 @@ public class ex_03_Bottom_Modal extends CommonToAll {
     @Test
     public void bottomModalPractice(){
 
+        //Click button to open modal
         WebElement openModalBtn=driver.findElement(By.xpath("//button[@id='myBtn']"));
         action.moveToElement(openModalBtn).build().perform();
         openModalBtn.click();
 
+        //check if modal is visible
         WaitHelpers.checkVisibility(driver, By.xpath("//div[@class='modal-content']"));
 
         //Check modal header content
