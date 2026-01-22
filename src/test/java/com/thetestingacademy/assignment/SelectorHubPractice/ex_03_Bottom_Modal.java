@@ -40,7 +40,7 @@ public class ex_03_Bottom_Modal extends CommonToAll {
         //Check modal header content
         WebElement modalText=driver.findElement(By.xpath("//div[@class='modal-content']//a"));
         //System.out.println(modalText.getText());
-        Assert.assertEquals("Testing Daily - Free App To Get The Latest Testing Feed.",modalText.getText());
+        Assert.assertEquals(modalText.getText(),"Testing Daily - Free App To Get The Latest Testing Feed.");
 
         //close modal
         WebElement closeBtn= driver.findElement(By.xpath("//div[@class='modal-header']/span"));

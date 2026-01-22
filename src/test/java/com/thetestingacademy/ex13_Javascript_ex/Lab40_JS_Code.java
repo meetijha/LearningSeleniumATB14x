@@ -1,4 +1,4 @@
-package com.thetestingacademy.Lab40_JS_Code;
+package com.thetestingacademy.ex13_Javascript_ex;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
