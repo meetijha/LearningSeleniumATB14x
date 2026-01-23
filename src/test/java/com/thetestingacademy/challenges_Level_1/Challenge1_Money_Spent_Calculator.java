@@ -51,7 +51,7 @@ public class Challenge1_Money_Spent_Calculator extends CommonToAll {
             moneySpent=moneySpent-Float.parseFloat(money[1].replace(",",""));
         }
 
-        System.out.println("Money Spend = "+moneySpent+" USD");
+        System.out.println("Money Spent = "+moneySpent+" USD");
         Assert.assertEquals(moneySpent,1996.22f);
 
         //close browser
