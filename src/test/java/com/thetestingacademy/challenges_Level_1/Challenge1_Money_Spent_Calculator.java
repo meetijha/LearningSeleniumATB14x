@@ -14,14 +14,14 @@ import java.util.List;
 public class Challenge1_Money_Spent_Calculator extends CommonToAll {
 
     @Test
-    public void calculate_money_spent(){
-        WebDriver driver=new ChromeDriver();
-        openBrowser(driver,"https://demo.applitools.com");
+    public void calculate_money_spent() {
+        WebDriver driver = new ChromeDriver();
+        openBrowser(driver, "https://demo.applitools.com");
 
         //Login Webelements
-        WebElement username= driver.findElement(By.id("username"));
-        WebElement password= driver.findElement(By.id("password"));
-        WebElement signIn= driver.findElement(By.id("log-in"));
+        WebElement username = driver.findElement(By.id("username"));
+        WebElement password = driver.findElement(By.id("password"));
+        WebElement signIn = driver.findElement(By.id("log-in"));
 
         // Fill form and sign in
         username.sendKeys("Admin");
@@ -31,28 +31,28 @@ public class Challenge1_Money_Spent_Calculator extends CommonToAll {
         WaitHelpers.waitJVM(5000);
 
         // Very app.html page
-        String url=driver.getCurrentUrl();
+        String url = driver.getCurrentUrl();
         Assert.assertTrue(url.contains("app.html"));
 
         //Get all finance data
-        List<WebElement> additions= driver.findElements(By.xpath("//span[@class='text-success']"));
-        List<WebElement> minus= driver.findElements(By.xpath("//span[@class='text-danger']"));
+        List<WebElement> additions = driver.findElements(By.xpath("//span[@class='text-success']"));
+        List<WebElement> minus = driver.findElements(By.xpath("//span[@class='text-danger']"));
 
-        Float moneySpent=0.0f;
-        for(WebElement m:additions){
-            String moneyUSD=m.getText();
-            String[] money=moneyUSD.split(" ");
-            moneySpent=moneySpent+Float.parseFloat(money[1].replace(",",""));
+        Float moneySpent = 0.0f;
+        for (WebElement m : additions) {
+            String moneyUSD = m.getText();
+            String[] money = moneyUSD.split(" ");
+            moneySpent = moneySpent + Float.parseFloat(money[1].replace(",", ""));
         }
 
-        for(WebElement m:minus){
-            String moneyUSD=m.getText();
-            String[] money=moneyUSD.split(" ");
-            moneySpent=moneySpent-Float.parseFloat(money[1].replace(",",""));
+        for (WebElement m : minus) {
+            String moneyUSD = m.getText();
+            String[] money = moneyUSD.split(" ");
+            moneySpent = moneySpent - Float.parseFloat(money[1].replace(",", ""));
         }
 
-        System.out.println("Money Spent = "+moneySpent+" USD");
-        Assert.assertEquals(moneySpent,1996.22f);
+        System.out.println("Money Spent = " + moneySpent + " USD");
+        Assert.assertEquals(moneySpent, 1996.22f);
 
         //close browser
         closeBrowser(driver);

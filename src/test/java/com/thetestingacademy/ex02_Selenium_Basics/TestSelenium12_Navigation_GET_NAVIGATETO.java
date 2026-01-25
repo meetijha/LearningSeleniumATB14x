@@ -8,9 +8,8 @@ import org.testng.annotations.Test;
 public class TestSelenium12_Navigation_GET_NAVIGATETO {
     @Description("Open the URL")
     @Test
-    public void test_Selenium01()
-    {
-        WebDriver driver= new FirefoxDriver();
+    public void test_Selenium01() {
+        WebDriver driver = new FirefoxDriver();
         driver.get("https://google.com");
 
         driver.navigate().to("https://bing.com");

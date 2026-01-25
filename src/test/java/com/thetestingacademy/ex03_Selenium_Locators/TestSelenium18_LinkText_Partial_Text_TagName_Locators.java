@@ -42,4 +42,4 @@ public class TestSelenium18_LinkText_Partial_Text_TagName_Locators extends Commo
         // closeBrowser(driver);
     }
 
-    }
+}

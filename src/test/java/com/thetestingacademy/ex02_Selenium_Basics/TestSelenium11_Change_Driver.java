@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class TestSelenium11_Change_Driver {
 
     public static void main(String[] args) {
-        WebDriver driver=new FirefoxDriver();
-        driver=new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
+        driver = new ChromeDriver();
     }
 }

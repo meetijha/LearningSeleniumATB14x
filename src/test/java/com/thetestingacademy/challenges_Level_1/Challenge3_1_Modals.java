@@ -18,22 +18,22 @@ public class Challenge3_1_Modals extends CommonToAll {
         openBrowser(driver, "https://demoqa.com/modal-dialogs");
 
         waitJVM(5000);
-        Actions actions=new Actions(driver);
-        JavascriptExecutor js=(JavascriptExecutor)driver;
+        Actions actions = new Actions(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0, 500);");
 
-        WebElement smallModal=driver.findElement(By.xpath("//button[@id='showSmallModal']"));
+        WebElement smallModal = driver.findElement(By.xpath("//button[@id='showSmallModal']"));
         actions.moveToElement(smallModal).build().perform();
         smallModal.click();
         waitJVM(5000);
-        WebElement closeSmallModalBtn=driver.findElement(By.xpath("//div[@id='example-modal-sizes-title-sm']/parent::div//span[1]"));
+        WebElement closeSmallModalBtn = driver.findElement(By.xpath("//div[@id='example-modal-sizes-title-sm']/parent::div//span[1]"));
         closeSmallModalBtn.click();
 
-        WebElement largeModal=driver.findElement(By.xpath("//button[@id='showLargeModal']"));
+        WebElement largeModal = driver.findElement(By.xpath("//button[@id='showLargeModal']"));
         actions.moveToElement(largeModal).build().perform();
         largeModal.click();
         waitJVM(5000);
-        WebElement closeLargeModalBtn=driver.findElement(By.xpath("//div[@id='example-modal-sizes-title-lg']/parent::div//span[1]"));
+        WebElement closeLargeModalBtn = driver.findElement(By.xpath("//div[@id='example-modal-sizes-title-lg']/parent::div//span[1]"));
         closeLargeModalBtn.click();
 
         closeBrowser(driver);

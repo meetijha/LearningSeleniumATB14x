@@ -17,8 +17,8 @@ public class Lab30_SVG extends CommonToAll {
     @Test
     public void test_Flipkart_Search_SVG_Icon() {
 
-        WebDriver driver=new ChromeDriver();
-        openBrowser(driver,"https://www.flipkart.com/search");
+        WebDriver driver = new ChromeDriver();
+        openBrowser(driver, "https://www.flipkart.com/search");
 
         WebElement search_input = driver.findElement(By.name("q"));
         search_input.sendKeys("macmini");
@@ -26,12 +26,12 @@ public class Lab30_SVG extends CommonToAll {
         List<WebElement> svgElements = driver.findElements(By.xpath("//*[local-name()='svg']"));
         svgElements.get(0).click();
 
-        WaitHelpers.checkVisibility(driver,By.xpath("//div[contains(@data-id,'CPU')]/div/a[2]"));
+        WaitHelpers.checkVisibility(driver, By.xpath("//div[contains(@data-id,'CPU')]/div/a[2]"));
         List<WebElement> titlesResults = driver.findElements(By.xpath("//div[contains(@data-id,'CPU') or contains(@data-id,'MP')]/div/a[2]"));
-        for (WebElement title :  titlesResults){
+        for (WebElement title : titlesResults) {
             System.out.println(title.getText());
         }
 
         closeBrowser(driver);
     }
-    }
+}

@@ -1,7 +1,6 @@
 package com.thetestingacademy.ex05_Selenium_Waits;
 
 import com.thetestingacademy.CommonToAll;
-import com.thetestingacademy.CommonToAll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -13,11 +12,12 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.function.Function;
+
 public class TestSelenium25_Fluent_Wait extends CommonToAll {
 
 
     @Test
-    public void test_FW(){
+    public void test_FW() {
 
         WebDriver driver = new ChromeDriver();
         driver.navigate().to("https://app.vwo.com");
@@ -68,9 +68,6 @@ public class TestSelenium25_Fluent_Wait extends CommonToAll {
 
         Assert.assertEquals(error_message.getText(), "Your email, password, IP address or location did not match");
         driver.quit();
-
-
-
 
 
     }

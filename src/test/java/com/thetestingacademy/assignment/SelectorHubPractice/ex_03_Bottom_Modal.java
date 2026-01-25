@@ -18,19 +18,19 @@ public class ex_03_Bottom_Modal extends CommonToAll {
     Actions action;
 
     @BeforeTest
-    public void setUp(){
+    public void setUp() {
 
-        driver=new ChromeDriver();
-        action=new Actions(driver);
+        driver = new ChromeDriver();
+        action = new Actions(driver);
         openBrowser(driver, "https://selectorshub.com/xpath-practice-page/");
 
     }
 
     @Test
-    public void bottomModalPractice(){
+    public void bottomModalPractice() {
 
         //Click button to open modal
-        WebElement openModalBtn=driver.findElement(By.xpath("//button[@id='myBtn']"));
+        WebElement openModalBtn = driver.findElement(By.xpath("//button[@id='myBtn']"));
         action.moveToElement(openModalBtn).build().perform();
         openModalBtn.click();
 
@@ -38,12 +38,12 @@ public class ex_03_Bottom_Modal extends CommonToAll {
         WaitHelpers.checkVisibility(driver, By.xpath("//div[@class='modal-content']"));
 
         //Check modal header content
-        WebElement modalText=driver.findElement(By.xpath("//div[@class='modal-content']//a"));
+        WebElement modalText = driver.findElement(By.xpath("//div[@class='modal-content']//a"));
         //System.out.println(modalText.getText());
-        Assert.assertEquals(modalText.getText(),"Testing Daily - Free App To Get The Latest Testing Feed.");
+        Assert.assertEquals(modalText.getText(), "Testing Daily - Free App To Get The Latest Testing Feed.");
 
         //close modal
-        WebElement closeBtn= driver.findElement(By.xpath("//div[@class='modal-header']/span"));
+        WebElement closeBtn = driver.findElement(By.xpath("//div[@class='modal-header']/span"));
         closeBtn.click();
     }
 

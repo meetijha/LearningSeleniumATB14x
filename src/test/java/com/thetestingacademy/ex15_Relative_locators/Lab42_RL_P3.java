@@ -1,6 +1,9 @@
 package com.thetestingacademy.ex15_Relative_locators;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
@@ -20,11 +23,11 @@ public class Lab42_RL_P3 {
 
         waitJVM(5000);
 
-        List<WebElement> locations=driver.findElements(By.xpath("//div[contains(@class,'location-name')]"));
+        List<WebElement> locations = driver.findElements(By.xpath("//div[contains(@class,'location-name')]"));
 
-        for(WebElement location:locations){
-            String rank=driver.findElement(with(By.tagName("p")).toLeftOf(location)).getText();
-            String aqi=driver.findElement(with(By.tagName("span")).toRightOf(location)).getText();
+        for (WebElement location : locations) {
+            String rank = driver.findElement(with(By.tagName("p")).toLeftOf(location)).getText();
+            String aqi = driver.findElement(with(By.tagName("span")).toRightOf(location)).getText();
 
             System.out.println("| +" + rank + " | " + location.getText() + " | " + aqi + " | ");
 

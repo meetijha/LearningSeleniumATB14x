@@ -24,26 +24,26 @@ public class Lab31_SVG_MAP extends CommonToAll {
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
     }
-        @Description("Verify Tripura is present in the map and click to zoom it")
-        @Test
-        public void test_India_map_SVG (){
 
-            String URL = "https://www.amcharts.com/svg-maps/?map=india";
-            openBrowser(driver,URL);
+    @Description("Verify Tripura is present in the map and click to zoom it")
+    @Test
+    public void test_India_map_SVG() {
 
-            WaitHelpers.waitJVM(3000);
+        String URL = "https://www.amcharts.com/svg-maps/?map=india";
+        openBrowser(driver, URL);
 
-            //*[name()='svg']/*[name()='g'][7]/*[name()='g']/*[name()='g']/*[name()='path']
-            List<WebElement> states= driver.findElements(By.xpath("//*[local-name()='path' and @role='menuitem']"));
+        WaitHelpers.waitJVM(3000);
 
-            for(WebElement state:states){
-                String name= state.getDomAttribute("aria-label");
+        //*[name()='svg']/*[name()='g'][7]/*[name()='g']/*[name()='g']/*[name()='path']
+        List<WebElement> states = driver.findElements(By.xpath("//*[local-name()='path' and @role='menuitem']"));
 
-                if(name.contains("Tripura"))
-                {
-                    state.click();
-                }
+        for (WebElement state : states) {
+            String name = state.getDomAttribute("aria-label");
+
+            if (name.contains("Tripura")) {
+                state.click();
             }
         }
     }
+}
 

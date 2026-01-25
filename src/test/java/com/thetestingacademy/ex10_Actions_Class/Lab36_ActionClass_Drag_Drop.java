@@ -17,6 +17,6 @@ public class Lab36_ActionClass_Drag_Drop {
         //  from and to
         WebElement from = driver.findElement(By.id("column-a"));
         WebElement to = driver.findElement(By.id("column-b"));
-        actions.dragAndDrop(from,to).build().perform();
+        actions.dragAndDrop(from, to).build().perform();
     }
 }

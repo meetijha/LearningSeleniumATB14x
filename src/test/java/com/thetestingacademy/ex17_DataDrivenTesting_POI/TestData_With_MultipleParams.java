@@ -32,13 +32,13 @@ public class TestData_With_MultipleParams {
 
         String[] s = password.split("_");
         String passwd = s[0];
-        String testStatus=s[1];
-        String message =s[2];
+        String testStatus = s[1];
+        String message = s[2];
 
         WebElement passwordInputBox = driver.findElement(By.name("password"));
         passwordInputBox.sendKeys(passwd);
 
-        System.out.println(testStatus+" | "+message);
+        System.out.println(testStatus + " | " + message);
 
         WebElement buttonSubmit = driver.findElement(By.id("js-login-btn"));
         buttonSubmit.click();
@@ -52,7 +52,7 @@ public class TestData_With_MultipleParams {
     }
 
     @DataProvider
-    public Object[][] getData(){
+    public Object[][] getData() {
         // READ THE DATA FROM THE EXCEL FILE
         // GIVE THEM IN THE 2D ARRAY
         System.out.println("Accessing sheet 2");

@@ -13,26 +13,24 @@ import java.util.List;
 public class SeleniumWebTables2 extends CommonToAll {
 
     @Test
-    public void test_web_table_login(){
-        WebDriver driver= new ChromeDriver();
+    public void test_web_table_login() {
+        WebDriver driver = new ChromeDriver();
         openBrowser(driver, "https://awesomeqa.com/webtable1.html");
 
         // Find the xPath for the WebTable
         // -> //table[@summary="Sample Table"]
 
-        WaitHelpers.waitImplicitWait(driver,3);
+        WaitHelpers.waitImplicitWait(driver, 3);
 
         WebElement table = driver.findElement(By.xpath("//table[@summary='Sample Table']/tbody"));
 
         // rows and columns
         List<WebElement> rows_tables = table.findElements(By.tagName("tr"));
 
-        for(int i=0;i<rows_tables.size();i++)
-        {
-            List<WebElement> col=rows_tables.get(i).findElements(By.tagName("td"));
+        for (int i = 0; i < rows_tables.size(); i++) {
+            List<WebElement> col = rows_tables.get(i).findElements(By.tagName("td"));
 
-            for(WebElement c:col)
-            {
+            for (WebElement c : col) {
                 System.out.println(c.getText());
             }
         }

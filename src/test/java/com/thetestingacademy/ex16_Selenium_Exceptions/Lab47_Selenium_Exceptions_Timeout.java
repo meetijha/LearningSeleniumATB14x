@@ -24,4 +24,4 @@ public class Lab47_Selenium_Exceptions_Timeout extends CommonToAll {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@id='abc']")));
         // org.openqa.selenium.TimeoutException:
     }
-    }
+}

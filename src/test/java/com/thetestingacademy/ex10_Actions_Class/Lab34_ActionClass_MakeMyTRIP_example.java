@@ -19,7 +19,7 @@ public class Lab34_ActionClass_MakeMyTRIP_example extends CommonToAll {
     @Test
     public void test_actions_p4() {
         WebDriver driver = new ChromeDriver();
-        openBrowser(driver,"https://www.makemytrip.com/");
+        openBrowser(driver, "https://www.makemytrip.com/");
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@data-cy=\"closeModal\"]")));
@@ -56,10 +56,10 @@ public class Lab34_ActionClass_MakeMyTRIP_example extends CommonToAll {
         new WaitHelpers().waitJVM(1000);
 
         try {
-            List<WebElement> list_auto_complete=  driver.findElements(By.xpath("//ul[@class=\"react-autosuggest__suggestions-list\"]/li"));
+            List<WebElement> list_auto_complete = driver.findElements(By.xpath("//ul[@class=\"react-autosuggest__suggestions-list\"]/li"));
 
-            for(WebElement e : list_auto_complete){
-                if(e.getText().contains("Chandigarh")){
+            for (WebElement e : list_auto_complete) {
+                if (e.getText().contains("Chandigarh")) {
                     e.click();
                 }
             }
@@ -72,10 +72,10 @@ public class Lab34_ActionClass_MakeMyTRIP_example extends CommonToAll {
         toCity.sendKeys("DEL");
 
         try {
-            List<WebElement> list_auto_complete=  driver.findElements(By.xpath("//ul[@class=\"react-autosuggest__suggestions-list\"]/li"));
+            List<WebElement> list_auto_complete = driver.findElements(By.xpath("//ul[@class=\"react-autosuggest__suggestions-list\"]/li"));
 
-            for(WebElement e : list_auto_complete){
-                if(e.getText().contains("Del")){
+            for (WebElement e : list_auto_complete) {
+                if (e.getText().contains("Del")) {
                     e.click();
                 }
             }

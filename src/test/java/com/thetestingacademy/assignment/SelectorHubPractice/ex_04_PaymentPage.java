@@ -15,23 +15,23 @@ public class ex_04_PaymentPage extends CommonToAll {
     Actions action;
 
     @BeforeTest
-    public void setUp(){
+    public void setUp() {
 
-        driver=new ChromeDriver();
-        action=new Actions(driver);
+        driver = new ChromeDriver();
+        action = new Actions(driver);
         openBrowser(driver, "https://selectorshub.com/xpath-practice-page/");
 
     }
 
     @Test
-    public void fillPaymentPage(){
+    public void fillPaymentPage() {
 
         // Payment form elements
-        WebElement cardName= driver.findElement(By.xpath("//input[@id='cardName']"));
-        WebElement cardNumber= driver.findElement(By.xpath("//input[@id='cardNumber']"));
-        WebElement expiryDate=driver.findElement(By.xpath("//input[@id='expiry']"));
-        WebElement cvv=driver.findElement(By.xpath("//input[@id='cvv']"));
-        WebElement payBtn=driver.findElement(By.xpath("//button[contains(text(),'Pay')]"));
+        WebElement cardName = driver.findElement(By.xpath("//input[@id='cardName']"));
+        WebElement cardNumber = driver.findElement(By.xpath("//input[@id='cardNumber']"));
+        WebElement expiryDate = driver.findElement(By.xpath("//input[@id='expiry']"));
+        WebElement cvv = driver.findElement(By.xpath("//input[@id='cvv']"));
+        WebElement payBtn = driver.findElement(By.xpath("//button[contains(text(),'Pay')]"));
 
         //Enter details
         cardName.sendKeys("Meeti");
@@ -43,6 +43,7 @@ public class ex_04_PaymentPage extends CommonToAll {
         action.moveToElement(payBtn).build().perform();
         payBtn.click();
     }
+
     @AfterTest
     public void close() {
         closeBrowser(driver);

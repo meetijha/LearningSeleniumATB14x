@@ -18,7 +18,5 @@ public class TestSelenium03 {
         // Commmand number 2 - POST request to give to the driver to navigate to a URL
 
 
-
-
     }
 }

@@ -6,7 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-import static org.openqa.selenium.support.locators.RelativeLocator.*;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
 public class Lab42_RL_P2 {
 
     public static void main(String[] args) {
@@ -20,9 +21,9 @@ public class Lab42_RL_P2 {
 
         WebElement username_element = driver.findElement(By.xpath("//input[@id='username']"));
 
-        WebElement error_element= driver.findElement(with(By.tagName("small")).below(username_element));
+        WebElement error_element = driver.findElement(with(By.tagName("small")).below(username_element));
 
         String errorText = error_element.getText();
-        Assert.assertEquals(errorText,"Username must be at least 3 characters");
+        Assert.assertEquals(errorText, "Username must be at least 3 characters");
     }
 }

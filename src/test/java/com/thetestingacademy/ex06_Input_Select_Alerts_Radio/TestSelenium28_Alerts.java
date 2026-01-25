@@ -1,8 +1,6 @@
 package com.thetestingacademy.ex06_Input_Select_Alerts_Radio;
 
 import com.thetestingacademy.CommonToAll;
-
-import com.thetestingacademy.CommonToAll;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,6 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+
 public class TestSelenium28_Alerts extends CommonToAll {
 
 
@@ -50,4 +49,4 @@ public class TestSelenium28_Alerts extends CommonToAll {
 
     }
 
-    }
+}

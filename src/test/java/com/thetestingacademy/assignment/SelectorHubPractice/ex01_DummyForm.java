@@ -17,7 +17,7 @@ public class ex01_DummyForm extends CommonToAll {
     WebDriver driver = new ChromeDriver();
 
     @BeforeTest
-    public void openBrowser(){
+    public void openBrowser() {
 
         openBrowser(driver, "https://selectorshub.com/xpath-practice-page/");
     }
@@ -41,7 +41,7 @@ public class ex01_DummyForm extends CommonToAll {
         country.sendKeys("India");
 
         // pratice scroll down, can use actions also to move to an element
-        JavascriptExecutor js=(JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500);");
         waitJVM(5000);
 

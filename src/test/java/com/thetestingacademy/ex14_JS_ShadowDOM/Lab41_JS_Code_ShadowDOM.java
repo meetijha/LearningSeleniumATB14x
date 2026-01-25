@@ -1,6 +1,5 @@
 package com.thetestingacademy.ex14_JS_ShadowDOM;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,11 +21,11 @@ public class Lab41_JS_Code_ShadowDOM {
         //driver.findElement(By.id("pizza")).sendKeys("farmhouse");
         // The term pizza is actually within the shadow DOM.
 
-       JavascriptExecutor js=(JavascriptExecutor) driver;
-       WebElement pizza=(WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('div#app2').shadowRoot.querySelector('input#pizza')");
-       pizza.sendKeys("farmhouse");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement pizza = (WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('div#app2').shadowRoot.querySelector('input#pizza')");
+        pizza.sendKeys("farmhouse");
 
-       //        driver.switchTo().frame("pact3");
+        //        driver.switchTo().frame("pact3");
 //
 //        WebElement input_glaf = driver.findElement(By.id("glaf"));
 //        input_glaf.sendKeys("Hi");

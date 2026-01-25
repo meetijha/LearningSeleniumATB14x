@@ -1,4 +1,5 @@
 package com.thetestingacademy.ex05_Selenium_Waits;
+
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+
 public class TestSelenium23_Fix_Miniproject {
     // Locators - Find the Web elements
     // Open the URL .app.vwo.com/#/login](https://app.vwo.com/#/login)
@@ -59,7 +61,6 @@ public class TestSelenium23_Fix_Miniproject {
 
 
     }
-
 
 
 }

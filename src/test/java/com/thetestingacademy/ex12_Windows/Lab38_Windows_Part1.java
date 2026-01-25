@@ -19,18 +19,18 @@ public class Lab38_Windows_Part1 {
         driver.get(URL);
         driver.manage().window().maximize();
 
-        String parent_id =driver.getWindowHandle();
+        String parent_id = driver.getWindowHandle();
         System.out.println(parent_id);
 
         WebElement link_parent = driver.findElement(By.xpath("//a[text()=\"Click Here\"]"));
         link_parent.click();
 
-        Set<String> windows_handles_ids=driver.getWindowHandles();
+        Set<String> windows_handles_ids = driver.getWindowHandles();
 
-        for(String window:  windows_handles_ids){
+        for (String window : windows_handles_ids) {
             System.out.println(window);
             driver.switchTo().window(window);
-            if(driver.getPageSource().contains("New Window")){
+            if (driver.getPageSource().contains("New Window")) {
                 System.out.println("Test Passed!!");
             }
         }

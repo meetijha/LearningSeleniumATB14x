@@ -1,7 +1,6 @@
 package com.thetestingacademy.ex06_Input_Select_Alerts_Radio;
 
 import com.thetestingacademy.CommonToAll;
-import com.thetestingacademy.CommonToAll;
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

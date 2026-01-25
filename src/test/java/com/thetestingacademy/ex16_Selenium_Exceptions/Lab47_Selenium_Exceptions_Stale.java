@@ -30,4 +30,4 @@ public class Lab47_Selenium_Exceptions_Stale extends CommonToAll {
         search_inputbox.sendKeys("the testing academy");
 
     }
-    }
+}

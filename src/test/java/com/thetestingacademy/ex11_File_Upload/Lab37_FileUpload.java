@@ -15,7 +15,7 @@ public class Lab37_FileUpload {
         String user_dir = System.getProperty("user.dir");
 
         System.out.println(user_dir);
-        String path = user_dir+"/src/test/java/com/thetestingacademy/ex11_File_Upload/TestData.txt";
+        String path = user_dir + "/src/test/java/com/thetestingacademy/ex11_File_Upload/TestData.txt";
 
         uploadFileInput.sendKeys(path);
         driver.findElement(By.name("submit")).click();

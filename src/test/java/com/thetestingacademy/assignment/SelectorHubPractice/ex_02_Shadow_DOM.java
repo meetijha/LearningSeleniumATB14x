@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -20,19 +19,20 @@ public class ex_02_Shadow_DOM extends CommonToAll {
     Actions action;
 
     @BeforeTest
-    public void setUp(){
+    public void setUp() {
 
-        driver=new ChromeDriver();
-        action=new Actions(driver);
+        driver = new ChromeDriver();
+        action = new Actions(driver);
         openBrowser(driver, "https://selectorshub.com/xpath-practice-page/");
 
     }
-    @Test
-    public void ShadowDomPractice(){
 
-        JavascriptExecutor js=(JavascriptExecutor) driver;
-        WebElement learningHubLink =(WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('a')");
-        String parentWindow= driver.getWindowHandle();
+    @Test
+    public void ShadowDomPractice() {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement learningHubLink = (WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('a')");
+        String parentWindow = driver.getWindowHandle();
 
         // Click Learning Hub
         action.moveToElement(learningHubLink).click().build().perform();
@@ -43,16 +43,17 @@ public class ex_02_Shadow_DOM extends CommonToAll {
         waitJVM(5000);
 
         //Fill username
-        WebElement username=(WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('input#kils')");
+        WebElement username = (WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('input#kils')");
         username.sendKeys("Meeti");
 
         //Fill pizza name
-        WebElement pizzaname=(WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('div#app2').shadowRoot.querySelector('input#pizza')");
+        WebElement pizzaname = (WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('div#app2').shadowRoot.querySelector('input#pizza')");
         pizzaname.sendKeys("farmhouse");
 
         //Navigate to password and enter value
         action.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("DummyPassword").build().perform();
     }
+
     @AfterTest
     public void close() {
         closeBrowser(driver);

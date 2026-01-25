@@ -1,7 +1,6 @@
 package com.thetestingacademy.ex06_Input_Select_Alerts_Radio;
 
 import com.thetestingacademy.CommonToAll;
-import com.thetestingacademy.CommonToAll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,4 +27,4 @@ public class TestSelenium27_Select_Static extends CommonToAll {
         closeBrowser(driver);
 
     }
-    }
+}

@@ -50,7 +50,7 @@ public class Lab50_DDT_TestNG_POI_REAL {
     }
 
     @DataProvider
-    public Object[][] getData(){
+    public Object[][] getData() {
         // READ THE DATA FROM THE EXCEL FILE
         // GIVE THEM IN THE 2D ARRAY
         return UtilExcel.getTestDataFromExcel("sheet1");

@@ -6,11 +6,11 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.openqa.selenium.WebDriver;
 
 public class TestSelenium17_Project_Locators_Selenium_ID_CLASSNAME_NAME extends CommonToAll {
 
@@ -38,11 +38,11 @@ public class TestSelenium17_Project_Locators_Selenium_ID_CLASSNAME_NAME extends 
 //        data-qa="hocewoqisi"
 //        placeholder="Enter email ID">
 
-        WebElement email_input_box =driver.findElement(By.id("login-username"));
+        WebElement email_input_box = driver.findElement(By.id("login-username"));
         email_input_box.sendKeys("admin@admin.com");
 
         // 2. Find the password inputbox and enter the password
-       // <input type="password"
+        // <input type="password"
         // class="text-input W(100%)"
         // vwo-html-translate-attr="placeholder"
         // vwo-html-translate-placeholder="login:enterPassword"
@@ -51,7 +51,7 @@ public class TestSelenium17_Project_Locators_Selenium_ID_CLASSNAME_NAME extends 
         // data-qa="jobodapuxe"
         // placeholder="Enter password">
 
-        WebElement password_input_box=driver.findElement(By.id("login-password"));
+        WebElement password_input_box = driver.findElement(By.id("login-password"));
         password_input_box.sendKeys("wrongpassword@123");
 
         // Step 3 - Find the Submit and click on the button.
@@ -61,7 +61,7 @@ public class TestSelenium17_Project_Locators_Selenium_ID_CLASSNAME_NAME extends 
         // onclick="login.login(event)"
         // data-qa="sibequkica">
 
-        WebElement button_submit =driver.findElement(By.id("js-login-btn"));
+        WebElement button_submit = driver.findElement(By.id("js-login-btn"));
         button_submit.click();
 
         //Wait some time
@@ -73,10 +73,10 @@ public class TestSelenium17_Project_Locators_Selenium_ID_CLASSNAME_NAME extends 
         // data-qa="rixawilomi">
         // Your email, password, IP address or location did not match</div>
 
-        WebElement error_message=driver.findElement(By.className("notification-box-description"));
+        WebElement error_message = driver.findElement(By.className("notification-box-description"));
         System.out.println(error_message.getText());
 
-        Assert.assertEquals(error_message.getText(),"Your email, password, IP address or location did not match");
+        Assert.assertEquals(error_message.getText(), "Your email, password, IP address or location did not match");
 
         closeBrowser(driver);
     }

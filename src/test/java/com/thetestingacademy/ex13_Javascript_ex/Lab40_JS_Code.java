@@ -20,8 +20,8 @@ public class Lab40_JS_Code {
         js.executeScript("window.scrollBy(0, 500);");
         js.executeScript("window.scrollBy(0, 500);");
 
-        String url= js.executeScript("return document.URL").toString();
-        String title= js.executeScript("return document.title").toString();
+        String url = js.executeScript("return document.URL").toString();
+        String title = js.executeScript("return document.title").toString();
 
         System.out.println(url);
         System.out.println(title);
