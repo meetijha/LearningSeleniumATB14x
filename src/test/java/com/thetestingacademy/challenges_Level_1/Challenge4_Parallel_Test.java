@@ -26,9 +26,6 @@ public class Challenge4_Parallel_Test extends CommonToAll {
         } else if (browser.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
         }
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
     }
 
 
